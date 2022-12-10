@@ -1,0 +1,59 @@
+[
+  {
+    "title": "Hoisting in JavaScript",
+    "description": "In JavaScript, Hoisting is a kind of default behavior in which all the declarations either variable declaration or function declaration are moved at the top of the scope just before executing the program's code. However, it can be considered an advantage because all functions and variable declarations are placed to the top of their scope no matter where they are all declared anywhere in the whole program, even regardless of whether they are declared global or local. Due to the concept of hoisting in JavaScript, we can call a function even before we define the function definition in our program's code.In simple words, we can say that we can use the variables and functions in JavaScript before declaring them because as we discussed above JavaScript compiler moves the declarations of all the variables and functions at the top of their scope so that there will not be an error of any kind. The concept of JavaScript of moving all declarations of the variables and functions to the top of their scope by compiler itself just before the execution of code is known as Hoisting.",
+    "source": "https://www.javatpoint.com/what-is-hoisting-in-javascript",
+    "tags": [
+      "javascript",
+      "hoisting",
+      "scope"
+    ],
+    "date": "2022-12-10T11:20:40.723Z"
+  },
+  {
+    "title": "ES6 Arrow Function",
+    "description": "Arrow functions are introduced in ES6, which provides you a more accurate way to write the functions in JavaScript. They allow us to write smaller function syntax. Arrow functions make your code more readable and structured. Arrow functions are anonymous functions (the functions without a name and not bound with an identifier). They don't return any value and can declare without the function keyword. Arrow functions cannot be used as the constructors. The context within the arrow functions is lexically or statically defined. They are also called as Lambda Functions in different languages. Arrow functions do not include any prototype property, and they cannot be used with the new keyword.",
+    "source": "https://www.javatpoint.com/es6-arrow-function",
+    "tags": [
+      "javascript",
+      "ES6",
+      "arrow-function"
+    ],
+    "date": "2022-10-10T11:20:40.723Z"
+  },
+  {
+    "title": "What is a Clousre ?",
+    "description": "A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time. To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function. The inner function will have access to the variables in the outer function scope, even after the outer function has returned.",
+    "source": "https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36",
+    "tags": [
+      "javascript",
+      "closure",
+      "lexical environment",
+      "scope"
+    ],
+    "date": "2022-12-9T11:20:40.723Z"
+  },
+  {
+    "title": "“This” Keyword in Javascript?",
+    "description": "“This” keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function. If the function being referenced is a regular function, “this” references the global object. If the function that is being referenced is a method in an object, “this” references the object itself. The JavaScript “this” keyword is one of the most widely used keywords. It can seem complex at first, but once you start using “this” keyword, everything will become clear.",
+    "source": "https://www.simplilearn.com/tutorials/javascript-tutorial/javascript-this-keyword",
+    "tags": [
+      "javascript",
+      "function",
+      "arrow-function",
+      "this"
+    ],
+    "date": "2022-11-10T11:20:40.723Z"
+  },
+  {
+    "title": "Javascript - Functions",
+    "description": "A function is a group of reusable code which can be called anywhere in your program. This eliminates the need of writing the same code again and again. It helps programmers in writing modular codes. Functions allow a programmer to divide a big program into a number of small and manageable functions. Like any other advanced programming language, JavaScript also supports all the features necessary to write modular code using functions. You must have seen functions like alert() and write() in the earlier chapters. We were using these functions again and again, but they had been written in core JavaScript only once. JavaScript allows us to write our own functions as well. This section explains how to write your own functions in JavaScript.",
+    "source": "https://www.tutorialspoint.com/javascript/javascript_functions.htm",
+    "tags": [
+      "javascript",
+      "function",
+      "resuable-code"
+    ],
+    "date": "2022-12-5T11:20:40.723Z"
+  }
+]
