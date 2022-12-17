@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main/Main";
 import About from "../pages/Main/About";
+import Cart from "../pages/Main/Cart";
 
 import Home from "../pages/Main/Home";
 
@@ -22,10 +23,10 @@ const routes = createBrowserRouter([
             //     path: "top-rated",
             //     element: <TopRated />,
             // },
-            // {
-            //     path: "cart",
-            //     element: <Cart />,
-            // },
+            {
+                path: "cart",
+                element: <Cart />,
+            },
         ],
     },
     // {
