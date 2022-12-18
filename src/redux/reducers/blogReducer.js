@@ -1,4 +1,4 @@
-import { ADD_BLOG, ADD_TO_CART, ALREADY_READED, FIND_A_BLOG, LOAD_BLOGS, REMOVE_BLOG } from "../actionTypes/actionTypes";
+import { ADD_BLOG, ADD_TO_CART, ALREADY_READED, FIND_A_BLOG, LOAD_BLOGS, REMOVE_BLOG, UPDATE_BLOG } from "../actionTypes/actionTypes";
 
 const initialState = {
     cart: [],
@@ -60,6 +60,11 @@ const blogReducer = (state = initialState, action) => {
                 find: state.blogs.filter(
                     (blog) => blog._id === action.payload
                 ),
+            };
+        case UPDATE_BLOG:
+            return {
+                ...state,
+                blogs: [...state.blogs, action.payload],
             };
         default:
             return state;

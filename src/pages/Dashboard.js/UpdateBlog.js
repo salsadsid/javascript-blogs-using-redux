@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 // import addProductData from "../../redux/thunk/products/addProductData";
 import addBlogData from "../../thunk/blogs/addBlogData";
+import upadateBlogData from "../../thunk/blogs/updateBlogData";
 
 const UpdateBlog = () => {
     const find = useSelector(state => state.blog.find)
@@ -46,7 +47,7 @@ const UpdateBlog = () => {
             spec: [],
         };
         console.log(blog)
-        dispatch(addBlogData(blog))
+        dispatch(upadateBlogData(blog, find[0]._id))
     };
 
     return (
@@ -148,7 +149,7 @@ const UpdateBlog = () => {
                         className=' px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
                         type='submit'
                     >
-                        Submit
+                        Update
                     </button>
                 </div>
             </form>

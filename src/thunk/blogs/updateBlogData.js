@@ -1,10 +1,10 @@
 
-import { addBlog } from "../../redux/actions/blogActions"
+import { updateBlog } from "../../redux/actions/blogActions"
 
 
-const addBlogData = (blog) => {
+const upadateBlogData = (blog, id) => {
     return async (dispatch, getState) => {
-        const res = await fetch("http://localhost:5000/blog", {
+        const res = await fetch(`http://localhost:5000/blog/${id}`, {
             method: "PATCH",
             body: JSON.stringify(blog),
             headers: {
@@ -14,12 +14,11 @@ const addBlogData = (blog) => {
         const data = await res.json()
 
         if (data.modifiedCount) {
-            dispatch(addBlog({
-                _id: data.insertedId,
+            dispatch(updateBlog({
                 ...blog,
             }))
         }
     }
 }
 
-export default addBlogData;
+export default upadateBlogData;
