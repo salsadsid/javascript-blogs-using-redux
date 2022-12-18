@@ -1,8 +1,9 @@
-import { ADD_TO_CART, ALREADY_READED, LOAD_BLOGS } from "../actionTypes/actionTypes";
+import { ADD_BLOG, ADD_TO_CART, ALREADY_READED, FIND_A_BLOG, LOAD_BLOGS, REMOVE_BLOG } from "../actionTypes/actionTypes";
 
 const initialState = {
     cart: [],
     blogs: [],
+    find: []
 };
 
 const blogReducer = (state = initialState, action) => {
@@ -41,6 +42,25 @@ const blogReducer = (state = initialState, action) => {
                     cart: [...newCart, { ...selectedBlog, cartPosition: -1 }],
                 };
             }
+        case ADD_BLOG:
+            return {
+                ...state,
+                blogs: [...state.blogs, action.payload],
+            };
+        case REMOVE_BLOG:
+            return {
+                ...state,
+                blogs: state.blogs.filter(
+                    (blog) => blog._id !== action.payload
+                ),
+            };
+        case FIND_A_BLOG:
+            return {
+                ...state,
+                find: state.blogs.filter(
+                    (blog) => blog._id === action.payload
+                ),
+            };
         default:
             return state;
     }

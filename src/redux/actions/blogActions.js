@@ -1,4 +1,4 @@
-import { ADD_TO_CART, ALREADY_READED, LOAD_BLOGS } from "../actionTypes/actionTypes"
+import { ADD_BLOG, ADD_TO_CART, ALREADY_READED, FIND_A_BLOG, LOAD_BLOGS, REMOVE_BLOG, UPDATE_BLOG } from "../actionTypes/actionTypes"
 
 export const loadBlogs = (data) => {
     return {
@@ -18,3 +18,27 @@ export const alreadyReaded = (data) => {
         payload: data
     }
 }
+export const addBlog = (data) => {
+    return {
+        type: ADD_BLOG,
+        payload: data
+    }
+}
+export const removeBlog = (id) => {
+    return {
+        type: REMOVE_BLOG,
+        payload: id,
+    };
+};
+export const updateBlog = (id) => {
+    return {
+        type: UPDATE_BLOG,
+        payload: id,
+    };
+};
+export const findABlog = (id) => {
+    return {
+        type: FIND_A_BLOG,
+        payload: id,
+    };
+};
