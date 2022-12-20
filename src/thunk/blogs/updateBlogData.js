@@ -4,7 +4,7 @@ import { updateBlog } from "../../redux/actions/blogActions"
 
 const upadateBlogData = (blog, id) => {
     return async (dispatch, getState) => {
-        const res = await fetch(`http://localhost:5000/blog/${id}`, {
+        const res = await fetch(`https://javascript-blogs-using-redux-server.vercel.app/blog/${id}`, {
             method: "PATCH",
             body: JSON.stringify(blog),
             headers: {
