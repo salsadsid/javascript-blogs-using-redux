@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { findABlog } from "../../redux/actions/blogActions";
 import deleteBlog from "../../thunk/blogs/deleteBlog";
 import loadBlogsData from "../../thunk/blogs/fetchBlogs";
+import { BiEdit } from "react-icons/bi";
 // import deleteProduct from "../../redux/thunk/products/deleteProduct";
 
 // import loadProductData from "../../redux/thunk/products/fetchProducts";
@@ -36,8 +37,8 @@ const BlogList = () => {
                                 <th class='p-2'>
                                     <div class='font-semibold text-left'>Year</div>
                                 </th>
-                                <th class='p-2'>
-                                    <div class='font-semibold text-center'>Action</div>
+                                <th colSpan={2} class='p-2'>
+                                    <div class='font-semibold text-center'>Actions</div>
                                 </th>
                             </tr>
                         </thead>
@@ -46,7 +47,7 @@ const BlogList = () => {
                             {blogs.map(({ title, description, source, date_year, _id }) => (
                                 <tr>
                                     <td class='p-2'>
-                                        <input type='checkbox' class='w-5 h-5' value='id-1' />
+                                        <input type='checkbox' class='w-5 h-5 text-orange-400 border-orange-400 active:border-none' value='id-1' />
                                     </td>
                                     <td class='p-2'>
                                         <div class='font-medium text-gray-800'>{title}</div>
@@ -56,7 +57,7 @@ const BlogList = () => {
                                     </td>
 
                                     <td class='p-2'>
-                                        <div class='text-left font-medium text-indigo-500'>
+                                        <div class='text-left font-medium text-orange-500'>
                                             {date_year}
                                         </div>
                                     </td>
@@ -64,7 +65,7 @@ const BlogList = () => {
                                         <div class='flex justify-center'>
                                             <button onClick={() => dispatch(deleteBlog(_id))}>
                                                 <svg
-                                                    class='w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1'
+                                                    class='w-8 h-8 hover:text-orange-600 rounded hover:bg-gray-100 p-1'
                                                     fill='none'
                                                     stroke='currentColor'
                                                     viewBox='0 0 24 24'
@@ -83,20 +84,7 @@ const BlogList = () => {
                                     <td class='p-2'>
                                         <div class='flex justify-center'>
                                             <Link to='update-blog' onClick={() => dispatch(findABlog(_id))}>
-                                                <svg
-                                                    class='w-8 h-8 hover:text-blue-600 rounded-full hover:bg-gray-100 p-1'
-                                                    fill='none'
-                                                    stroke='currentColor'
-                                                    viewBox='0 0 24 24'
-                                                    xmlns='http://www.w3.org/2000/svg'
-                                                >
-                                                    <path
-                                                        stroke-linecap='round'
-                                                        stroke-linejoin='round'
-                                                        stroke-width='2'
-                                                        d='M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16'
-                                                    ></path>
-                                                </svg>
+                                                <BiEdit className="text-2xl hover:text-orange-600 w-8 h-8  rounded hover:bg-gray-100 p-1"></BiEdit>
                                             </Link>
                                         </div>
                                     </td>

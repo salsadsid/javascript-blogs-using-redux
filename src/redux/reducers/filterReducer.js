@@ -20,7 +20,7 @@ const filterReducer = (state = initialState, action) => {
                 filter: {
                     ...state.filter,
                     first_upload: !state.filter.first_upload,
-                    last_upload: state.filter.first_upload
+
                 }
             }
         case TOGGLE_LAST_UPLOAD:
@@ -29,7 +29,7 @@ const filterReducer = (state = initialState, action) => {
                 filter: {
                     ...state.filter,
                     last_upload: !state.filter.last_upload,
-                    first_upload: state.filter.last_upload
+
                 }
             }
         case FILTER_BY_TAG:

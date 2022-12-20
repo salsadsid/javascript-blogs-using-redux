@@ -10,25 +10,6 @@ const UpdateBlog = () => {
     console.log(find)
     const { register, handleSubmit } = useForm();
     const dispatch = useDispatch()
-
-    // {
-    //     defaultValues: {
-    //         title: find[0].title,
-    //         description: find.description,
-    //         source: find.source,
-
-    //         date_year: find.year,
-    //         date_month: find.month,
-    //         date_day: find.date,
-    //         tags: [
-    //             find.tag1,
-    //             find.tag2,
-    //             find.tag3,
-    //             find.tag4,
-    //         ],
-    //         spec: [],
-    //     }
-    // }
     const submit = (data) => {
         const blog = {
             title: data.title,
@@ -44,7 +25,7 @@ const UpdateBlog = () => {
                 data.tag3,
                 data.tag4,
             ],
-            spec: [],
+
         };
         console.log(blog)
         dispatch(upadateBlogData(blog, find[0]._id))
@@ -79,13 +60,13 @@ const UpdateBlog = () => {
                     <label className='mb-2' htmlFor='year'>
                         Year
                     </label>
-                    <input defaultValue={find.length ? find[0].date_year : ""} type='number' name='year' id='year' {...register("year")} />
+                    <input defaultValue={2022} type='number' name='year' id='year' {...register("year")} />
                 </div>
                 <div className='flex flex-col w-full max-w-xs'>
                     <label className='mb-2' htmlFor='month'>
                         Month
                     </label>
-                    <input defaultValue={find.length ? find[0].date_month : ""} type='number' name='month' id='month' {...register("month")} />
+                    <input defaultValue={12} type='number' name='month' id='month' {...register("month")} />
                 </div>
                 <div className='flex flex-col w-full max-w-xs'>
                     <label className='mb-2' htmlFor='date'>
@@ -95,7 +76,7 @@ const UpdateBlog = () => {
                 </div>
 
 
-                <div className='flex flex-col w-full max-w-xs'></div>
+
                 <div className='flex flex-col w-full max-w-xs'>
                     <label className='mb-2' htmlFor='tag1'>
                         Tags 1
@@ -146,7 +127,7 @@ const UpdateBlog = () => {
 
                 <div className='flex justify-between items-center w-full'>
                     <button
-                        className=' px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
+                        className=' px-4 py-3 bg-orange-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
                         type='submit'
                     >
                         Update

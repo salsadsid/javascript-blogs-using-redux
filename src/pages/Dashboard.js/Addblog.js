@@ -22,7 +22,7 @@ const AddBlog = () => {
                 data.tag3,
                 data.tag4,
             ],
-            spec: [],
+
         };
         console.log(blog)
         dispatch(addBlogData(blog))
@@ -73,7 +73,7 @@ const AddBlog = () => {
                 </div>
 
 
-                <div className='flex flex-col w-full max-w-xs'></div>
+
                 <div className='flex flex-col w-full max-w-xs'>
                     <label className='mb-2' htmlFor='tag1'>
                         Tags 1
@@ -121,7 +121,7 @@ const AddBlog = () => {
 
                 <div className='flex justify-between items-center w-full'>
                     <button
-                        className=' px-4 py-3 bg-indigo-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
+                        className=' px-4 py-3 bg-orange-500 rounded-md font-semibold text-white text-lg disabled:bg-gray-500'
                         type='submit'
                     >
                         Submit

@@ -15,6 +15,7 @@ const upadateBlogData = (blog, id) => {
 
         if (data.modifiedCount) {
             dispatch(updateBlog({
+                _id: id,
                 ...blog,
             }))
         }
